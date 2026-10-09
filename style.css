@@ -1,8 +1,9 @@
 :root {
-  --noir: #0e0e0e;
-  --anthracite: #1a1a1a;
-  --or: #c9a96e;
-  --creme: #f5efe6;
+  --noir: #1a0a08;
+  --anthracite: #2b1210;
+  --or: #e8772e;
+  --rouge: #a3141f;
+  --creme: #fbf3ea;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -21,7 +22,7 @@ body {
   position: fixed; top: 0; left: 0; right: 0; z-index: 10;
   display: flex; justify-content: space-between; align-items: center;
   padding: 18px 6%;
-  background: rgba(14,14,14,0.85);
+  background: rgba(26,10,8,0.9);
   backdrop-filter: blur(8px);
 }
 .logo {
@@ -43,9 +44,7 @@ body {
   justify-content: center; align-items: center;
   text-align: center; padding: 0 8%;
   color: var(--creme);
-  background:
-    linear-gradient(rgba(14,14,14,0.65), rgba(14,14,14,0.85)),
-    radial-gradient(circle at top, #3a2f1c, #0e0e0e);
+  background: radial-gradient(circle at top, #a3141f 0%, #4a0e12 55%, #1a0a08 100%);
   background-size: cover; background-position: center;
 }
 .surtitre {
@@ -98,10 +97,17 @@ body {
 }
 
 #contact p { margin-bottom: 28px; }
-#contact .bouton { color: var(--noir); border-color: var(--noir); }
-#contact .bouton:hover { background: var(--noir); color: var(--or); }
+#contact .bouton { color: var(--rouge); border-color: var(--rouge); }
+#contact .bouton:hover { background: var(--rouge); color: var(--creme); }
 
 footer {
   background: var(--noir); color: var(--creme);
   text-align: center; padding: 24px; font-size: 0.75rem; opacity: 0.9;
+}
+
+/* Téléphone */
+@media (max-width: 600px) {
+  .nav { flex-direction: column; gap: 6px; padding: 12px 4%; }
+  .nav nav a { margin: 0 9px; font-size: 0.7rem; }
+  .section { padding: 70px 6%; }
 }
